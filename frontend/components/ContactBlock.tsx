@@ -1,6 +1,5 @@
 import { Clock, CreditCard, MapPin, MessageCircle, ParkingCircle, Phone, Wifi } from "lucide-react";
 import { business } from "@/data/business";
-import { sitePath } from "@/lib/sitePath";
 import CTAButton from "./CTAButton";
 
 export default function ContactBlock({ withForm = false }: { withForm?: boolean }) {
@@ -67,16 +66,14 @@ export default function ContactBlock({ withForm = false }: { withForm?: boolean 
           </div>
 
           <div className="relative min-h-[360px] overflow-hidden rounded-4xl bg-white shadow-card ring-1 ring-black/5">
-            <img
-              src={sitePath("/images/map-placeholder.svg")}
-              alt="Схематичная карта проезда к автосервису Бим Моторс в Мытищах"
+            <iframe
+              src={business.yandexMapEmbedUrl}
+              title="Яндекс Карта: Бим Моторс, Мытищи, Волковское шоссе, вл17/1"
               loading="lazy"
-              className="h-full min-h-[360px] w-full object-cover"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+              className="h-full min-h-[360px] w-full border-0"
             />
-            <div className="absolute inset-x-4 bottom-4 rounded-3xl bg-white/90 p-4 shadow-card backdrop-blur">
-              <p className="font-semibold text-ink">Мытищи, Волковское ш., вл17/1</p>
-              <p className="mt-1 text-sm text-muted">Точные координаты можно заменить на iframe Яндекс.Карт перед публикацией.</p>
-            </div>
           </div>
         </div>
         {withForm ? null : null}
