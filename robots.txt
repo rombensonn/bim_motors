@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /storage/
+
+Sitemap: https://bim-motors.ru/sitemap.xml
