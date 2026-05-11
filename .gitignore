@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+
+backend/config.php
+backend/storage/*.json
+backend/storage/*.jsonl
+backend/storage/rate-limit.json
